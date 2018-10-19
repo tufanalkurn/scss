@@ -1,0 +1,48 @@
+
+// Typography
+$font-family-sans-serif: "Open Sans", sans-serif;
+
+// Theme Color 
+$primary:       #d20628 !default;
+$secondary:     #333b44 !default;
+$success:       #35a52b !default;
+$info:          #1943ba !default;
+$warning:       #f9a431 !default;
+$danger:        #c31818 !default;
+$dark:          #333b44 !default;
+$white:         #ffffff !default;
+$gray-100:      #f8f9fa !default;
+$gray-200:      #e9ecef !default;
+$gray-300:      #dee2e6 !default;
+$gray-400:      #ced4da !default;
+$gray-500:      #141414 !default;
+$gray-600:      #6c757d !default;
+$gray-700:      #495057 !default;
+$gray-800:      #343a40 !default;
+$gray-900:      #292927 !default;
+$black:         #000000 !default;
+
+$orange:        #f55414 !default;
+$purpul:        #834cb1 !default;
+//
+$blue-light:    #ecfdf7 !default;
+$pink:          #d4c512 !default;
+$instagram:     #d93175 !default;
+$facebook:      #3b5998 !default;
+$youtube:       #fe0000 !default;
+$twitter:       #1da1f2 !default;
+
+
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $gray-200,
+    "dark":       $dark,
+    "white":      $white,
+);
+
+

@@ -1,0 +1,101 @@
+
+.list-arrow {@include list-arrow();}
+.list-check {@include list-check($warning);}
+.dropdown-menu {opacity: 0; border: 0; transform: scale(0); transform-origin: 0 0; will-change: transform, opacity; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 2px 0 rgba($black, 0.14), 0 3px 1px -2px rgba($black, 0.2), 0 1px 5px 0 rgba($black, 0.12);
+	.dropdown-item {position: relative; display: flex; flex-flow: row wrap; align-items: center; min-width: 7rem; max-width: 17.5rem; min-height: 3rem; padding: 0.4rem 1rem; overflow: hidden; line-height: 1; text-overflow: ellipsis; word-wrap: break-word;}
+} // 
+.file-preview {background-color: $white;}
+.rating-xs {font-size: 18px !important;}
+.rating-container .filled-stars {text-shadow: none !important; color: $info !important; -webkit-text-stroke: 1px $info !important;}
+.krajee-default.file-preview-frame {background-color: $white;}
+.fileupload-buttonbar .btn {color: $white !important;}
+.fade.in {opacity: 1;}
+.device_attachment_form {width: 100%; float: left; 
+	[data-download-template-id*="template"], [data-upload-template-id*="template"] {overflow-y: auto;}
+	.fileupload-buttonbar {margin: 0px;
+		[class*="col-"] {padding-left: 0px; padding-right: 0px;}
+		.btn {padding: 0.5rem 0.5rem; font-size: 12px;}
+	}
+}
+.upload-kit .upload-kit-input, .upload-kit .upload-kit-item {background-color: #fff;}
+.modal-loader-overlay {display: none;}
+.open > .dropdown-menu, .dropdown-menu.show {display: block; opacity: 1; transform: scale(1);}
+.has-error {
+	.form-control {border-color: $danger !important;}
+	.help-block-error, .help-block {color: $danger;}
+}
+.has-success {
+	.form-control {border-color: $success !important;}
+	.help-block-error {color: $success;}
+}
+.modal-header .close {order: 2;}
+.bootstrap-tagsinput {
+	.label-info {background-color: $primary !important;}
+	.label-danger {background-color: $danger !important;}
+	.label-success {background-color: $success !important;}
+}
+.text-wrap {white-space: pre-wrap !important;}
+.custom-control-label {
+	&:before {width: 1.2rem; height: 1.2rem;}
+	&:after {width: 1.2rem; height: 1.2rem;}
+}
+.alert-widget .alert {margin-bottom: 0px; border-radius: 0px;}
+.bg-black {background-color: $black;}
+
+@for $i from 1 through 5 {
+    .shadow-#{$i} {
+      @include material-shadow($z-depth: $i);
+    }
+}
+.pagination {
+	> li {padding: 0px 3px;
+		&.prev.disabled span, &.next.disabled span {background-color: transparent; font-size: 18px; @include transition(); color: $gray-700; padding: 4.5px 11px; float: left; border: 1px solid #ddd; border-radius: 4px; margin: 0px 2px; cursor: not-allowed; border-radius: 50px; padding: 4px .25rem; width: 42px; height: 42px; text-align: center;}
+		> a {background-color: transparent; border-color: transparent; font-size: 16px; @include transition(); color: $gray-700; border-radius: 50px; padding: .5rem .25rem; width: 38px; height: 38px; text-align: center;
+			&:hover, &:focus {color: $primary; text-decoration: none;}
+		}
+		&.active > a, &.active > .page-link {color: $white; text-decoration: none; background-color: $gray-800; border-color: $gray-800;}
+		&:first-child, &:last-child {
+			> a {background-color: $primary; color: $white; border-radius: 8px !important; padding: .4rem .25rem; width: 45px; height: 38px; text-align: center;
+				.fa {font-size: 22px;}
+				&:hover, &:focus {background-color: darken($primary, 8%); border-color: darken($primary, 8%);}
+			}
+			&.active > a {background-color: $primary; color: $white; text-decoration: none;}
+		}
+	}
+} // Custom Pagination css end
+
+.notifications-menu {
+	.badge {position: absolute; top: 5px; right: 10px;}
+	.dropdown-menu {width: 250px;
+		.header {padding-left: 6px; padding-right: 6px; text-align: center;}
+		.footer {overflow-x: hidden;
+			a {font-size: 14px; text-align: center;	padding-top: 4px;
+				&:hover, &:focus {border-left-color: transparent;}
+			}
+		}
+		.row {margin: 0px; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap;} 
+		.col-xs-10 {-ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%;}
+		.col-xs-2 {-ms-flex: 0 0 16.666667%; flex: 0 0 16.666667%; max-width: 16.666667%;  display: none}
+		.notification {background-color: transparent;}
+		.title {font-weight: bold; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+		.notification .actions .fa {color: #333;}
+		> li.header + li, > li.header ~ li {max-height: 200px; overflow-y: scroll;
+			#notifications {height: 100%;}
+		}
+	}
+}  // Notification dropdown css end
+
+.switch {position: relative; display: inline-block; width: 40px; height: 22px; margin-bottom: 0px;
+	.slider {position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; border: 1px solid $gray-500; transition: .4s;
+		&:before {position: absolute; content: ""; height: 16px; width: 16px; left: 3px; bottom: 2px; background-color: $gray-500; transition: .4s;}
+		&.round {border-radius: 34px;
+			&:before {border-radius: 50%;}
+		}
+	}
+	input {display:none;
+		&:checked + .slider {border: 1px solid $primary;}
+		&:focus + .slider {box-shadow: 0 0 1px #2196F3;}
+		&:checked + .slider:before {transform: translateX(16px); background-color: $primary;}
+	}
+} // Switch css end
+
